@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Разработка механизмов аутентификации и авторизации для WEB-приложений на Flask</h1>
+<p>
+ Вы авторизовались на сайте Великолепных Виктории и Дарьи
+
+</p>
+  {% if current_user.is_authenticated %}
+    <form action="{{ url_for('fetch.logout') }}" target="_blank"class="navbar-item">
+        <button >Logout</button>
+    </form>
+
+    {% endif %}
+</body>
+</html>
